@@ -56,9 +56,9 @@ const App = () => {
   const paginatedTasks = filteredTasks.slice(currentPage * tasksPerPage, (currentPage + 1) * tasksPerPage); // Get tasks for the current page
 
   return (
-    <div className="app-container">
-      <header className="app-header">
-        <h1>TODO APPLICATION</h1> {/* Main title */}
+    <div className="min-h-screen bg-gray-100 p-6">
+      <header className="mb-6 text-center">
+        <h1 className="text-4xl font-bold text-blue-600">TODO APPLICATION</h1> {/* Main title */}
       </header>
       <main>
         {showForm ? ( // Conditional rendering for task form
@@ -72,28 +72,30 @@ const App = () => {
           />
         ) : (
           <>
-            <div className="task-actions">
+            <div className="flex justify-between mb-4">
               <input 
                 type="text" 
                 placeholder="Search by Assigned To..." 
                 value={searchTerm} 
                 onChange={(e) => setSearchTerm(e.target.value)} // Update search term
-                className="search-input" // CSS class for search input
+                className="border border-gray-300 rounded-md p-2 w-1/3 focus:outline-none focus:ring-2 focus:ring-blue-500" // Styled search input
               />
-              <button className="btn" onClick={() => setShowForm(true)}>New Task</button> {/* Button to add new task */}
-              <button className="btn" onClick={() => setTasks([])}>Refresh</button> {/* Button to clear tasks */}
+              <div>
+                <button className="btn bg-blue-500 text-white rounded-md px-4 py-2 mr-2 hover:bg-blue-600" onClick={() => setShowForm(true)}>New Task</button> {/* Button to add new task */}
+                <button className="btn bg-gray-300 text-gray-700 rounded-md px-4 py-2 hover:bg-gray-400" onClick={() => setTasks([])}>Refresh</button> {/* Button to clear tasks */}
+              </div>
             </div>
             <TaskTable tasks={paginatedTasks} onDelete={deleteTask} onEdit={startEditingTask} /> {/* Display tasks in table */}
-            <div className="pagination">
-              <button className="btn" disabled={currentPage === 0} onClick={() => setCurrentPage(currentPage - 1)}>Previous</button>
-              <span>Page {currentPage + 1} of {pagesCount}</span>
-              <button className="btn" disabled={currentPage >= pagesCount - 1} onClick={() => setCurrentPage(currentPage + 1)}>Next</button>
+            <div className="flex justify-between items-center mt-4">
+              <button className="btn bg-blue-500 text-white rounded-md px-4 py-2 disabled:opacity-50" disabled={currentPage === 0} onClick={() => setCurrentPage(currentPage - 1)}>Previous</button>
+              <span className="text-gray-700">Page {currentPage + 1} of {pagesCount}</span>
+              <button className="btn bg-blue-500 text-white rounded-md px-4 py-2 disabled:opacity-50" disabled={currentPage >= pagesCount - 1} onClick={() => setCurrentPage(currentPage + 1)}>Next</button>
             </div>
           </>
         )}
       </main>
-      <footer className="app-footer">
-        <p>&copy; 2024 Task Management</p> {/* Footer */}
+      <footer className="mt-6 text-center">
+        <p className="text-gray-600">&copy; 2024 Task Management</p> {/* Footer */}
       </footer>
 
       {/* Modal for confirming delete action */}
