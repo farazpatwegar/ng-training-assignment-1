@@ -1,19 +1,25 @@
 import React from 'react';
 
-const TaskItem = ({ task, onEdit, onDelete }) => {
+const TaskItem = ({ task, onEdit, onDelete, index }) => {
   return (
-    <tr>
-      <td className="border px-4 py-2">{task.title}</td>
+    <tr className="hover:bg-gray-50 transition duration-200">
+      <td className="border px-4 py-2">{index}</td> {/* Serial Number */}
       <td className="border px-4 py-2">{task.assignedTo}</td>
-      <td className="border px-4 py-2">{task.dueDate}</td>
+      <td className="border px-4 py-2">{task.date}</td>
       <td className="border px-4 py-2">{task.status}</td>
       <td className="border px-4 py-2">{task.priority}</td>
-      <td className="border px-4 py-2">{task.comments}</td>
+      <td className="border px-4 py-2">{task.comment}</td> {/* Updated to use 'comment' */}
       <td className="border px-4 py-2">
-        <button className="bg-blue-500 text-white px-2 py-1 rounded mr-2" onClick={() => onEdit(task)}>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1 rounded mr-2"
+          onClick={() => onEdit(task)}
+        >
           Edit
         </button>
-        <button className="bg-red-500 text-white px-2 py-1 rounded" onClick={() => onDelete(task.id)}>
+        <button
+          className="bg-red-500 hover:bg-red-700 text-white px-2 py-1 rounded"
+          onClick={() => onDelete(task.id)}
+        >
           Delete
         </button>
       </td>

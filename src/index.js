@@ -1,13 +1,11 @@
-// src/index.js
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';  // Keep your global styles if any
+import ReactDOM from 'react-dom/client';
 import App from './App';
-import '@salesforce-ux/design-system/assets/styles/salesforce-lightning-design-system.min.css'; // Import SLDS
+import './index.css'; // Ensure you have tailwind or custom styles imported here
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
