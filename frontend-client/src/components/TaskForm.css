@@ -1,0 +1,54 @@
+.task-form {
+  background-color: #ffffff; /* Background color for the form */
+  padding: 20px; /* Padding inside the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 20px; /* Margin below the form */
+}
+
+.task-form h2 {
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.task-form label {
+  display: block; /* Labels are block elements */
+  margin-bottom: 10px; /* Space below labels */
+}
+
+.task-form input,
+.task-form select,
+.task-form textarea {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside input fields */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  margin-bottom: 20px; /* Space below input fields */
+}
+
+.task-form .form-actions {
+  display: flex; /* Use flexbox for button layout */
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+.task-form .form-actions button {
+  padding: 10px 20px; /* Padding for buttons */
+  margin-left: 10px; /* Space between buttons */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.task-form .form-actions button[type="submit"] {
+  background-color: #007bff; /* Save button color */
+  color: white; /* Save button text color */
+}
+
+.task-form .form-actions button[type="button"] {
+  background-color: #dc3545; /* Cancel button color */
+  color: white; /* Cancel button text color */
+}
+
+.task-form .form-actions button:hover {
+  opacity: 0.8; /* Slightly fade on hover */
+}

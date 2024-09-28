@@ -1,0 +1,127 @@
+/* App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f0f2f5; /* Light grey background */
+  display: flex;
+  flex-direction: column; /* Vertical layout */
+  min-height: 100vh; /* Full viewport height */
+}
+
+.app-container {
+  flex: 1; /* Allows the app container to take remaining space */
+  max-width: 1000px; /* Maximum width for the content */
+  margin: 0 auto; /* Center the content */
+  padding: 20px; /* Padding around the content */
+}
+
+.app-header {
+  background-color: #007bff; /* Header background color */
+  color: white; /* Header text color */
+  padding: 20px; /* Padding inside the header */
+  text-align: center; /* Center-align text */
+  border-radius: 8px; /* Rounded corners */
+  margin-bottom: 20px; /* Space below the header */
+}
+
+.app-footer {
+  margin-top: 20px; /* Space above the footer */
+  text-align: center; /* Center-align footer text */
+  font-size: 0.9rem; /* Slightly smaller footer text */
+  color: #666; /* Grey color for footer text */
+}
+
+.task-actions {
+  display: flex; /* Use flexbox for task actions */
+  justify-content: space-between; /* Space buttons evenly */
+  margin-bottom: 20px; /* Margin below task actions */
+}
+
+.search-input {
+  flex: 1; /* Allow the search input to grow */
+  padding: 10px; /* Padding inside input field */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  margin-right: 10px; /* Space to the right */
+}
+
+.btn {
+  padding: 10px 20px; /* Padding inside buttons */
+  font-size: 16px; /* Font size for buttons */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.task-table {
+  margin-top: 20px; /* Space above the table */
+}
+
+.task-table h2 {
+  margin-bottom: 10px; /* Space below table title */
+}
+
+.task-table table {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Collapse borders */
+}
+
+.task-table th, .task-table td {
+  padding: 10px; /* Padding inside cells */
+  border: 1px solid #ddd; /* Light border for cells */
+}
+
+.task-table th {
+  background-color: #f8f9fa; /* Light background for headers */
+  text-align: left; /* Left align header text */
+}
+
+.task-table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Zebra striping for rows */
+}
+
+.pagination {
+  display: flex; /* Use flexbox for pagination */
+  justify-content: center; /* Center pagination controls */
+  margin-top: 20px; /* Margin above pagination */
+}
+
+.pagination button {
+  margin: 0 10px; /* Space between pagination buttons */
+}
+
+.form-actions {
+  display: flex; /* Use flexbox for button layout */
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+.form-actions button {
+  padding: 10px 20px; /* Padding for buttons */
+  margin-left: 10px; /* Space between buttons */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.form-actions button[type="submit"] {
+  background-color: #007bff; /* Save button color */
+  color: white; /* Save button text color */
+}
+
+.form-actions button[type="button"] {
+  background-color: #dc3545; /* Cancel button color */
+  color: white; /* Cancel button text color */
+}
+
+.form-actions button:hover {
+  opacity: 0.8; /* Slightly fade on hover */
+}

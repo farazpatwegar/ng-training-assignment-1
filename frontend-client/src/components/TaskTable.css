@@ -1,0 +1,52 @@
+/* TaskTable.css */
+
+.task-table {
+  margin-top: 20px; /* Space above the table */
+}
+
+.task-table table {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Collapse borders */
+}
+
+.task-table th, .task-table td {
+  padding: 10px; /* Padding inside cells */
+  border: 1px solid #ddd; /* Light border for cells */
+}
+
+.task-table th {
+  background-color: #f8f9fa; /* Light background for headers */
+  text-align: left; /* Left align header text */
+}
+
+.task-table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Zebra striping for rows */
+}
+
+.btn-edit {
+  background-color: #28a745; /* Green for edit button */
+  color: white; /* Text color */
+  padding: 5px 10px; /* Padding */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Transition effect */
+}
+
+.btn-edit:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.btn-delete {
+  background-color: #dc3545; /* Red for delete button */
+  color: white; /* Text color */
+  padding: 5px 10px; /* Padding */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Transition effect */
+}
+
+.btn-delete:hover {
+  background-color: #c82333; /* Darker red on hover */
+}

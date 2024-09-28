@@ -1,0 +1,41 @@
+/* Modal.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex; /* Center modal */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 1000; /* Ensure modal is on top */
+}
+
+.modal-content {
+  background: white; /* Modal background */
+  padding: 20px; /* Padding inside modal */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow */
+  width: 300px; /* Fixed width */
+  text-align: center; /* Center text */
+}
+
+.modal-actions {
+  margin-top: 20px; /* Space above actions */
+}
+
+.modal-actions button {
+  padding: 10px 20px; /* Padding for buttons */
+  margin: 0 5px; /* Space between buttons */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.modal-actions button:hover {
+  background-color: #007bff; /* Change background on hover */
+  color: white; /* Text color on hover */
+}
